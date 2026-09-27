@@ -23,6 +23,14 @@
       as="image"
       href="./titan-camping-outdoor-dolores.jpg"
       fetchpriority="high"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./titan-camping-outdoor-dolores-mobile.png"
+      fetchpriority="high"
+      media="(max-width: 767px)"
     />
 
     <meta property="og:type" content="website" />
@@ -94,6 +102,10 @@
         background: #3A3613;
       }
 
+      picture {
+        display: block;
+      }
+
       img {
         display: block;
         width: 100%;
@@ -103,14 +115,20 @@
     </style>
   </head>
   <body>
-    <img
-      src="./titan-camping-outdoor-dolores.jpg"
-      alt="Titan Camping &amp; Outdoor en Dolores, Buenos Aires"
-      title="Titan Camping &amp; Outdoor en Dolores"
-      width="2752"
-      height="1536"
-      loading="eager"
-      fetchpriority="high"
-    />
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset="./titan-camping-outdoor-dolores-mobile.png"
+      />
+      <img
+        src="./titan-camping-outdoor-dolores.jpg"
+        alt="Titan Camping &amp; Outdoor en Dolores, Buenos Aires"
+        title="Titan Camping &amp; Outdoor en Dolores"
+        width="2752"
+        height="1536"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
   </body>
 </html>
