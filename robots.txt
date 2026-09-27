@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://tizianomontenegro.github.io/TitanCampingOutdoor/sitemap.xml
